@@ -1,5 +1,3 @@
-# Creating a List of Dirty, Naughty, Obscene, and Otherwise Bad Words #
-
 Adapted from Shutterstocks list of Dirty, Naughty, Obscene, and Otherwise Bad Words.
 
 This library provides a grunt task for creating an array of profane words, and a regex to test against, as well as the capability to compile your own obscene word list.
