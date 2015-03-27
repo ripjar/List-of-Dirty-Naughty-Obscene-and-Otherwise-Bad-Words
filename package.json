@@ -1,7 +1,6 @@
 {
-  "name": "List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words",
+  "name": "grunt-naughty-words",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "node app.js"
   },

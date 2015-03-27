@@ -34,9 +34,13 @@ module.exports = function(grunt) {
     grunt.log.writeln('Compiling for: %s', languages);
 
     var allWords = [];
-
+    var dirPrefix = '';
+    var relativeDir = './node_modules/grunt-naughty-words';
+    if (grunt.file.isDir(relativeDir)) {
+      dirPrefix = relativeDir;
+    }
     languages.forEach(function (language) {
-      allWords = allWords.concat(grunt.file.read('./' + language).split('\n'));
+      allWords = allWords.concat(grunt.file.read(dirPrefix + language).split('\n'));
     });
 
     return allWords;
