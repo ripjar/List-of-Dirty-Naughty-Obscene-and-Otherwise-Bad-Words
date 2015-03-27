@@ -1,12 +1,39 @@
-# Our List of Dirty, Naughty, Obscene, and Otherwise Bad Words #
+# Creating a List of Dirty, Naughty, Obscene, and Otherwise Bad Words #
 
-With millions of images in our library and billions of user-submitted keywords, we work hard at Shutterstock to make sure that bad words don't show up in places they shouldn't.  This repo contains a list of words that we use to filter results from our autocomplete server and recommendation engine.
+Adapted from Shutterstocks list of Dirty, Naughty, Obscene, and Otherwise Bad Words.
 
-Please add to it as you see fit (particularly in non-English languages) or use it to spice up your next game of Scrabble :)
+This library provides a grunt task for creating an array of profane words, and a regex to test against, as well as the capability to compile your own obscene word list.
 
-Obvious warning: These lists contain material that many will find offensive.  (But that's the point!)
+## Installation
 
-Miscellaneous caveat: Clearly, what goes in these lists is subjective.  In our case, the question we use is, "What wouldn't we want to *suggest* that people look at?"  This of course varies between culture, language, and geographies, so in the end we just have to make our best guess.
+    npm install grunt-naughty-words ---save-dev 
+
+    grunt.loadNpmTasks('grunt-naughty-words');
+    
+## Usage
+    
+    // creating a list using grunt
+    bad_words: {
+      options: {
+        languages: ['en', 'it', 'de'], // english, italian and german        
+        varName: 'profanity'
+      },
+      all: {
+        dest: '<%= srcDir %>/javascript/profanity.js'
+      }
+    }
+
+    // in your app
+    profanityRegex.test(potentiallyProfaneWord);
+
+## Standalone compilation
+
+You may also build a single one-off file, or one with all languages is provided in the `dist` directory.
+    
+    # compile naughty words for English, Italian and German
+    grunt bad_words:all
+
+Output is found in `dist/badwords.js`.
 
 ## Languages
 
@@ -37,21 +64,9 @@ Miscellaneous caveat: Clearly, what goes in these lists is subjective.  In our c
 | [Turkish](tr)    | tr   |
 
 
-## Building 
-
-You may use grunt to build a list of bad words into a `JavaScript` file.
-    
-    # compile naughty words for English, Italian and German
-    grunt compile --languages=en,it,de
-
-Output is found in `dist/badwords.js`.
-
 ## References
 
-
-See also the [list of projects, documents, and organizations](USERS.md) that use these lists.
-
-© 2012–2015 Shutterstock, Inc.
+Wordlist: © 2012–2015 Shutterstock, Inc.
 
 [![Creative Commons License](http://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
