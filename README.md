@@ -36,6 +36,19 @@ Miscellaneous caveat: Clearly, what goes in these lists is subjective.  In our c
 | [Thai](th)       | th   |
 | [Turkish](tr)    | tr   |
 
+
+## Building 
+
+You may use grunt to build a list of bad words into a `JavaScript` file.
+    
+    # compile naughty words for English, Italian and German
+    grunt compile --languages=en,it,de
+
+Output is found in `dist/badwords.js`.
+
+## References
+
+
 See also the [list of projects, documents, and organizations](USERS.md) that use these lists.
 
 © 2012–2015 Shutterstock, Inc.
