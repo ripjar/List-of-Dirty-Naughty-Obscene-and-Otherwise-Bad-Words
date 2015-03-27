@@ -1,0 +1,26 @@
+{
+  "name": "List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ripjar/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words",
+  "authors": [
+    "jivings <james.ivings@ripjar.com>"
+  ],
+  "description": "A List of Dirty, Naughty, Obscene, and Otherwise Bad Words from Shutterstock",
+  "main": "gruntfile.js",
+  "keywords": [
+    "swearwords",
+    "bad",
+    "words",
+    "swearing",
+    "profanity",
+    "filter"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
