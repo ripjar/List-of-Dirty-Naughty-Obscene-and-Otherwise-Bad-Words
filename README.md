@@ -14,15 +14,17 @@ This library provides a grunt task for creating an array of profane words, and a
     bad_words: {
       options: {
         languages: ['en', 'it', 'de'], // english, italian and german        
-        varName: 'profanity'
+        varName: 'profanity',
+        namespace: 'App'
       },
       all: {
-        dest: '<%= srcDir %>/javascript/profanity.js'
+        dest: 'dist/javascript/profanity.js'
       }
     }
 
-    // in your app
-    profanityRegex.test(potentiallyProfaneWord);
+In JavaScript land, include `dist/javascript/profanity.js`, which will expose a regex on the namespaced scope (or globally if namespace not provided):
+
+    App.profanityRegex.test(potentiallyProfaneWord);
 
 ## Standalone compilation
 
